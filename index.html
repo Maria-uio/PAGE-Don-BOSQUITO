@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agosto, Mes de San Juan Bosco — Parroquia Beato Esteban Sándor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Petit+Formal+Script&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3ECDC;
+    --paper-dark:#E9DCBF;
+    --ink:#2A211B;
+    --ink-soft:#5B4E3F;
+    --maroon:#7A2432;
+    --maroon-dark:#5C1B26;
+    --gold:#B8902E;
+    --sepia:#8B6B4A;
+    --line:rgba(42,33,27,0.14);
+    --shadow:0 8px 24px rgba(42,33,27,0.10);
+    --radius:14px;
+    --maxw:920px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important;}
+  }
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Source Sans 3', sans-serif;
+    font-size:17px;
+    line-height:1.6;
+  }
+
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    margin:0;
+    color:var(--ink);
+  }
+
+  a{color:inherit;}
+
+  .script{
+    font-family:'Petit Formal Script', cursive;
+    font-weight:400;
+    color:var(--maroon);
+  }
+
+  .eyebrow{
+    font-size:0.78rem;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--maroon);
+    font-weight:700;
+  }
+
+  .wrap{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 24px;
+  }
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:rgba(243,236,220,0.94);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:14px 24px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .nav-brand{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:1.05rem;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .nav-brand .dot{
+    width:8px;height:8px;border-radius:50%;
+    background:var(--maroon);
+    flex-shrink:0;
+  }
+  .nav-links{
+    display:flex;
+    gap:22px;
+    list-style:none;
+    margin:0;padding:0;
+    font-size:0.92rem;
+    font-weight:600;
+  }
+  .nav-links a{
+    text-decoration:none;
+    color:var(--ink-soft);
+    padding:4px 2px;
+    border-bottom:2px solid transparent;
+    transition:color .2s ease, border-color .2s ease;
+  }
+  .nav-links a:hover, .nav-links a:focus-visible{
+    color:var(--maroon);
+    border-color:var(--maroon);
+  }
+  .nav-toggle{
+    display:none;
+    background:none;border:none;cursor:pointer;
+    flex-direction:column;gap:5px;
+    padding:6px;
+  }
+  .nav-toggle span{
+    width:22px;height:2px;background:var(--ink);display:block;
+  }
+
+  @media (max-width:760px){
+    .nav-links{
+      position:fixed;
+      top:58px;left:0;right:0;
+      background:var(--paper);
+      flex-direction:column;
+      gap:0;
+      border-bottom:1px solid var(--line);
+      max-height:0;
+      overflow:hidden;
+      transition:max-height .3s ease;
+    }
+    .nav-links.open{max-height:420px;}
+    .nav-links a{
+      display:block;
+      padding:14px 24px;
+      border-bottom:1px solid var(--line);
+      border-left:2px solid transparent;
+    }
+    .nav-links a:hover, .nav-links a:focus-visible{border-left-color:var(--maroon);}
+    .nav-toggle{display:flex;}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    padding:88px 24px 76px;
+    text-align:center;
+    overflow:hidden;
+    background:
+      radial-gradient(ellipse at 20% -10%, rgba(122,36,50,0.08), transparent 55%),
+      radial-gradient(ellipse at 85% 110%, rgba(184,144,46,0.10), transparent 55%);
+  }
+  .hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image: repeating-linear-gradient(0deg, transparent, transparent 34px, rgba(139,107,74,0.05) 35px);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative; max-width:640px; margin:0 auto;}
+  .hero .eyebrow{display:block; margin-bottom:6px;}
+  .hero h1{
+    font-size:clamp(2.4rem, 6vw, 3.6rem);
+    line-height:1.06;
+    letter-spacing:-0.01em;
+  }
+  .hero h1 .script{
+    display:block;
+    font-size:1.5em;
+    line-height:1;
+    margin-top:6px;
+  }
+  .hero p.lede{
+    margin:22px auto 0;
+    max-width:480px;
+    color:var(--ink-soft);
+    font-size:1.05rem;
+  }
+  .oratorios{
+    margin-top:28px;
+    display:flex;
+    gap:12px;
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+  .badge{
+    font-size:0.82rem;
+    font-weight:600;
+    padding:8px 14px;
+    border:1px solid var(--line);
+    border-radius:999px;
+    background:rgba(255,255,255,0.4);
+    color:var(--ink-soft);
+  }
+  .cta{
+    display:inline-block;
+    margin-top:34px;
+    padding:13px 28px;
+    background:var(--maroon);
+    color:var(--paper);
+    text-decoration:none;
+    border-radius:999px;
+    font-weight:700;
+    font-size:0.95rem;
+    letter-spacing:0.02em;
+    box-shadow:var(--shadow);
+    transition:transform .2s ease, background .2s ease;
+  }
+  .cta:hover, .cta:focus-visible{
+    background:var(--maroon-dark);
+    transform:translateY(-2px);
+  }
+
+  /* ---------- INTRO ---------- */
+  .intro{
+    padding:56px 24px 20px;
+    text-align:center;
+  }
+  .intro p{
+    max-width:560px;
+    margin:0 auto;
+    color:var(--ink-soft);
+  }
+
+  /* ---------- TIMELINE ---------- */
+  .timeline-section{
+    padding:40px 24px 100px;
+  }
+  .timeline{
+    position:relative;
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding-left:56px;
+  }
+  .timeline::before{
+    content:"";
+    position:absolute;
+    left:21px;
+    top:6px;
+    bottom:6px;
+    width:2px;
+    background:linear-gradient(to bottom, var(--gold), var(--maroon) 12%, var(--maroon) 88%, var(--gold));
+    opacity:0.55;
+  }
+
+  .event{
+    position:relative;
+    margin-bottom:54px;
+    opacity:0;
+    transform:translateY(18px);
+    transition:opacity .6s ease, transform .6s ease;
+  }
+  .event.visible{opacity:1; transform:translateY(0);}
+  .event:last-child{margin-bottom:0;}
+
+  .date-bead{
+    position:absolute;
+    left:-56px;
+    top:2px;
+    width:44px;height:44px;
+    border-radius:50%;
+    background:var(--paper);
+    border:2px solid var(--maroon);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Fraunces', serif;
+    font-weight:700;
+    font-size:1.05rem;
+    color:var(--maroon);
+    box-shadow:0 0 0 6px var(--paper);
+  }
+
+  .event-card{
+    background:var(--paper-dark);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:26px 28px;
+    box-shadow:var(--shadow);
+  }
+  .event-meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px 16px;
+    margin-bottom:10px;
+    font-size:0.85rem;
+    color:var(--sepia);
+    font-weight:600;
+  }
+  .event-meta span{display:flex; align-items:center; gap:6px;}
+  .event-card h3{
+    font-size:1.4rem;
+    margin-bottom:8px;
+  }
+  .event-card p{
+    color:var(--ink-soft);
+    margin:0;
+  }
+  .event-tag{
+    display:inline-block;
+    margin-bottom:10px;
+    font-size:0.72rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--gold);
+  }
+
+  .sub-days{
+    margin-top:18px;
+    padding-top:16px;
+    border-top:1px dashed var(--line);
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(150px,1fr));
+    gap:12px;
+  }
+  .sub-day{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:12px 14px;
+  }
+  .sub-day .d{
+    font-weight:700;
+    font-size:0.88rem;
+    color:var(--maroon);
+  }
+  .sub-day .b{
+    font-size:0.86rem;
+    color:var(--ink-soft);
+  }
+
+  .price-pill{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    margin-top:14px;
+    background:var(--maroon);
+    color:var(--paper);
+    font-weight:700;
+    padding:8px 16px;
+    border-radius:999px;
+    font-size:0.9rem;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background:var(--ink);
+    color:var(--paper);
+    padding:56px 24px 40px;
+    text-align:center;
+  }
+  footer h2{
+    color:var(--paper);
+    font-size:1.6rem;
+    margin-bottom:10px;
+  }
+  footer p{
+    color:rgba(243,236,220,0.72);
+    max-width:480px;
+    margin:0 auto 26px;
+  }
+  .footer-badges{
+    display:flex;
+    gap:12px;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-bottom:30px;
+  }
+  .footer-badges .badge{
+    border-color:rgba(243,236,220,0.24);
+    color:rgba(243,236,220,0.85);
+    background:rgba(243,236,220,0.06);
+  }
+  .fine{
+    font-size:0.8rem;
+    color:rgba(243,236,220,0.45);
+  }
+
+  @media (max-width:600px){
+    .timeline{padding-left:46px;}
+    .timeline::before{left:17px;}
+    .date-bead{left:-46px; width:36px; height:36px; font-size:0.9rem;}
+    .event-card{padding:20px 20px;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-brand"><span class="dot"></span>Parroquia Beato Esteban Sándor</div>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#pregon">Pregón</a></li>
+      <li><a href="#campeonato">Campeonato</a></li>
+      <li><a href="#semana-bosco">Semana Don Bosco</a></li>
+      <li><a href="#festival">Festival</a></li>
+      <li><a href="#misa">Misa Solemne</a></li>
+      <li><a href="#bingo">Bingo</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="inicio">
+  <div class="hero-inner">
+    <span class="eyebrow">Agosto · Mes de</span>
+    <h1>San Juan<span class="script">Bosco</span></h1>
+    <p class="lede">Un mes de fe, comunidad y alegría en la Parroquia Beato Esteban Sándor. Aquí encuentras todas las actividades, fechas y horarios en un solo lugar.</p>
+    <div class="oratorios">
+      <span class="badge">Oratorio San Juan Bosco</span>
+      <span class="badge">Oratorio San Francisco de Sales</span>
+    </div>
+    <a class="cta" href="#actividades">Ver todas las actividades</a>
+  </div>
+</header>
+
+<section class="intro">
+  <span class="eyebrow">Diez actividades, un solo mes</span>
+  <p>Desde el pregón de apertura hasta el bingo de cierre, cada actividad de agosto está pensada para vivir en comunidad el carisma de Don Bosco: encuentro, oración y servicio. Recorre la línea de tiempo para ver el detalle de cada una.</p>
+</section>
+
+<section class="timeline-section" id="actividades">
+  <div class="timeline">
+
+    <article class="event" id="pregon">
+      <div class="date-bead">01</div>
+      <div class="event-card">
+        <span class="event-tag">Apertura</span>
+        <h3>Pregón y Olimpiadas Don Bosco</h3>
+        <div class="event-meta">
+          <span>📅 Sábado 1 de agosto</span>
+          <span>🕝 14h30</span>
+        </div>
+        <p><strong>Recorrido:</strong> desde la Iglesia María de Todos los Santos (junto al colegio Juan Diego) hasta la Iglesia San Juan Bosco. Una caminata festiva que da inicio oficial al mes de Don Bosco.</p>
+      </div>
+    </article>
+
+    <article class="event" id="campeonato">
+      <div class="date-bead">02</div>
+      <div class="event-card">
+        <span class="event-tag">Deporte</span>
+        <h3>Campeonato Don Bosco</h3>
+        <div class="event-meta">
+          <span>📅 Domingo 2 — Fase de grupos</span>
+          <span>📅 Domingo 16 — Final</span>
+        </div>
+        <p>El deporte también es parte de la fiesta: primer encuentro el domingo 2 y gran final el domingo 16, cerrando el torneo junto con la Misa Solemne.</p>
+      </div>
+    </article>
+
+    <article class="event" id="reina">
+      <div class="date-bead">08</div>
+      <div class="event-card">
+        <span class="event-tag">Elección</span>
+        <h3>Reina de la Parroquia Beato Esteban Sándor</h3>
+        <div class="event-meta">
+          <span>📅 Sábado 8 de agosto</span>
+          <span>🕗 20h00</span>
+        </div>
+        <p>Una noche especial para elegir a quien representará a la parroquia durante las fiestas del mes.</p>
+      </div>
+    </article>
+
+    <article class="event" id="semana-bosco">
+      <div class="date-bead">10–14</div>
+      <div class="event-card">
+        <span class="event-tag">Misión</span>
+        <h3>Semana Don Bosco</h3>
+        <div class="event-meta">
+          <span>📅 Del 10 al 14 de agosto</span>
+          <span>🕖 19h00</span>
+        </div>
+        <p>Recorremos los barrios de Bastión para un momento de oración y la celebración de la santa misa junto a la comunidad, barrio por barrio.</p>
+        <div class="sub-days">
+          <div class="sub-day"><div class="d">Lunes 10</div><div class="b">Barrio Santa Teresa 1</div></div>
+          <div class="sub-day"><div class="d">Martes 11</div><div class="b">Barrio Luz del Guayas</div></div>
+          <div class="sub-day"><div class="d">Miércoles 12</div><div class="b">Barrio del Delfín</div></div>
+          <div class="sub-day"><div class="d">Jueves 13</div><div class="b">Barrio Bastión Chiquito</div></div>
+          <div class="sub-day"><div class="d">Viernes 14</div><div class="b">Barrio Familia Garaicoa Salazar</div></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="event" id="fogata">
+      <div class="date-bead">14</div>
+      <div class="event-card">
+        <span class="event-tag">Celebración</span>
+        <h3>Fogata</h3>
+        <div class="event-meta">
+          <span>📅 Viernes 14 de agosto</span>
+        </div>
+        <p>Al terminar la Semana Don Bosco, nos reunimos alrededor del fuego para celebrar en comunidad lo vivido durante la semana de misión.</p>
+      </div>
+    </article>
+
+    <article class="event" id="festival">
+      <div class="date-bead">15</div>
+      <div class="event-card">
+        <span class="event-tag">Arte y cultura</span>
+        <h3>Festival Artístico</h3>
+        <div class="event-meta">
+          <span>📅 Sábado 15 de agosto</span>
+          <span>🕝 14h30</span>
+        </div>
+        <p>Talento, música y danza toman el escenario en una tarde dedicada a la expresión artística de la comunidad.</p>
+      </div>
+    </article>
+
+    <article class="event" id="misa">
+      <div class="date-bead">16</div>
+      <div class="event-card">
+        <span class="event-tag">Liturgia</span>
+        <h3>Misa Solemne</h3>
+        <div class="event-meta">
+          <span>📅 Domingo 16 de agosto</span>
+          <span>🕙 10h00</span>
+        </div>
+        <p>El momento central del mes: una celebración eucarística solemne en honor a San Juan Bosco, junto con la final del campeonato.</p>
+      </div>
+    </article>
+
+    <article class="event" id="formacion">
+      <div class="date-bead">22</div>
+      <div class="event-card">
+        <span class="event-tag">Formación</span>
+        <h3>Formación: "Como Don Bosco, Escuchar para Servir"</h3>
+        <div class="event-meta">
+          <span>📅 Sábado 22 de agosto</span>
+          <span>🕘 09h00 — Formación</span>
+          <span>🕓 16h00 — Casa Abierta</span>
+        </div>
+        <p>Por la mañana, un espacio de formación inspirado en el estilo de escucha de Don Bosco. Por la tarde, Casa Abierta en los dos oratorios de la parroquia.</p>
+      </div>
+    </article>
+
+    <article class="event" id="bingo">
+      <div class="date-bead">29</div>
+      <div class="event-card">
+        <span class="event-tag">Cierre</span>
+        <h3>Bingo Cuartazo</h3>
+        <div class="event-meta">
+          <span>📅 Sábado 29 de agosto</span>
+          <span>🕓 04h00 P.M.</span>
+        </div>
+        <p>El mes cierra en grande con el tradicional Bingo Cuartazo. Adquiere tus tablas con los colaboradores de la parroquia.</p>
+        <div class="price-pill">Tabla $1</div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<footer id="contacto">
+  <h2>Te esperamos este agosto</h2>
+  <p>Toda la información de este sitio corresponde al cronograma oficial del mes de San Juan Bosco de la Parroquia Beato Esteban Sándor.</p>
+  <div class="footer-badges">
+    <span class="badge">Oratorio San Juan Bosco</span>
+    <span class="badge">Oratorio San Francisco de Sales</span>
+  </div>
+  <p class="fine">Parroquia Beato Esteban Sándor · Guayaquil</p>
+</footer>
+
+<script>
+  // Menú móvil
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen);
+  });
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Revelado de eventos al hacer scroll
+  const events = document.querySelectorAll('.event');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  events.forEach(ev => observer.observe(ev));
+</script>
+
+</body>
+</html>
