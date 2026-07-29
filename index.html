@@ -157,8 +157,31 @@
     text-align:center;
     overflow:hidden;
     background:
-      radial-gradient(ellipse at 20% -10%, rgba(122,36,50,0.08), transparent 55%),
-      radial-gradient(ellipse at 85% 110%, rgba(184,144,46,0.10), transparent 55%);
+      radial-gradient(ellipse at 20% -10%, rgba(122,36,50,0.10), transparent 55%),
+      radial-gradient(ellipse at 85% 110%, rgba(184,144,46,0.14), transparent 55%);
+  }
+  .hero-bg{
+    position:absolute;
+    inset:0;
+    background-image:url('assets/fondo-header.jpg');
+    background-size:cover;
+    background-position:center;
+    filter:blur(6px);
+    transform:scale(1.1);
+    opacity:0.35;
+    z-index:0;
+  }
+  .hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:var(--paper);
+    opacity:0.55;
+    z-index:0;
+  }
+  .hero-inner{
+    position:relative;
+    z-index:1;
   }
   .hero::before{
     content:"";
@@ -439,6 +462,7 @@
 </nav>
 
 <header class="hero" id="inicio">
+  <div class="hero-bg"></div>
   <div class="hero-inner">
     <span class="eyebrow">Agosto · Mes de</span>
     <h1>San Juan<span class="script">Bosco</span></h1>
