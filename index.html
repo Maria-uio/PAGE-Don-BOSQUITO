@@ -339,6 +339,30 @@
     font-size:0.86rem;
     color:var(--ink-soft);
   }
+  .map-link{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  margin-top:14px;
+  margin-right:10px;
+  font-size:0.88rem;
+  font-weight:600;
+  color:var(--maroon);
+  text-decoration:none;
+  border-bottom:1px solid var(--maroon);
+  padding-bottom:1px;
+  transition:color .2s ease, border-color .2s ease;
+}
+.map-link:hover, .map-link:focus-visible{
+  color:var(--maroon-dark);
+  border-color:var(--maroon-dark);
+}
+.map-links-group{
+  display:flex;
+  flex-wrap:wrap;
+  gap:4px 10px;
+  margin-top:6px;
+}
 
   .price-pill{
     display:inline-flex;
@@ -445,6 +469,9 @@
           <span>🕝 14h30</span>
         </div>
         <p><strong>Recorrido:</strong> desde la Iglesia María de Todos los Santos (junto al colegio Juan Diego) hasta la Iglesia San Juan Bosco. Una caminata festiva que da inicio oficial al mes de Don Bosco.</p>
+        <p style="margin-top:10px;">Contaremos con bandas de paz de unidades educativas invitadas.</p>
+<p style="margin-top:10px;"><strong>Llevar:</strong> silbatos, globos, ropa cómoda y agua.</p>
+<a class="map-link" href="https://maps.app.goo.gl/zPZB6VWSFXXmDG9a7" target="_blank" rel="noopener">📍 Ver lugar de encuentro en Google Maps</a>
       </div>
     </article>
 
@@ -458,6 +485,7 @@
           <span>📅 Domingo 16 — Final</span>
         </div>
         <p>El deporte también es parte de la fiesta: primer encuentro el domingo 2 y gran final el domingo 16, cerrando el torneo junto con la Misa Solemne.</p>
+        <a class="map-link" href="documentos/Campeonato_Don_Bosco.pdf" target="_blank" rel="noopener">📄 Descargar información del campeonato</a>
       </div>
     </article>
 
@@ -543,6 +571,10 @@
           <span>🕓 16h00 — Casa Abierta</span>
         </div>
         <p>Por la mañana, un espacio de formación inspirado en el estilo de escucha de Don Bosco. Por la tarde, Casa Abierta en los dos oratorios de la parroquia.</p>
+        <div class="map-links-group">
+  <a class="map-link" href="https://maps.app.goo.gl/sJX3H4qLvdKUaXYd8" target="_blank" rel="noopener">📍 Oratorio San Juan Bosco</a>
+  <a class="map-link" href="https://maps.app.goo.gl/DNef9hX5QtCvNTQh9?g_st=ac" target="_blank" rel="noopener">📍 Oratorio San Francisco de Sales</a>
+</div>
       </div>
     </article>
 
